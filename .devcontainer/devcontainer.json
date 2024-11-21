@@ -1,0 +1,6 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  },
+  "postStartCommand": "sudo dpkg -i https://downloads.mongodb.com/compass/mongodb-mongosh_2.0.0_amd64.deb"
+}
