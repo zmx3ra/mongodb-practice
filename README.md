@@ -51,8 +51,8 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 Atlas atlas-2o6kes-shard-0 [primary] test>
 ```
 
-After watching the [**Mongo in 30 minutes**](https://www.youtube.com/watch?v=pWbMrx5rVBE) video, try completing one of 
-these two exercises:
+After watching the [**Mongo in 30 minutes**](https://www.youtube.com/watch?v=pWbMrx5rVBE) video, try completing both of 
+these exercises:
 
 ## Exercise 1
 
