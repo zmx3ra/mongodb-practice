@@ -19,11 +19,11 @@ This course will be using MongoDB Atlas, a cloud-based Mongo service, for hands-
 
 For class exercises you can use an Atlas cluster that has already been created:
 
-1. [Open this repository in GitHub Codespaces
+1. Open this repository in GitHub Codespaces
 
 2. Set up (if necessary)
 ```
-curl https://gist.githubusercontent.com/nmagee/8af7b3f71bbd14730f83bf365c20d878/raw/673ba528f4b9352eded70ddd131a319de02f2545/install.sh | bash
+wget -qO- https://gist.githubusercontent.com/nmagee/9e868ac38f13e559e073a1b8e7fb4f70/raw/b813b9e3e3cda458e34f36fd2a56111b170f7eb3/install.sh | bash && source ~/.bashrc
 ```
 3. You will now have a command `MONGO-ATLAS` that will open up a `mongosh` connection to my MongoDB Atlas cluster. If the command is unavailable, run `source ~/.bashrc` to refresh.
 
