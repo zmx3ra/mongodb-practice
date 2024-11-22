@@ -60,7 +60,7 @@ these exercises.
 
 ## Exercise 1
 
-This task uses sample data available in the Atlas Cloud console.
+This task uses sample data available in the [**Atlas Cloud console**](https://cloud.mongodb.com/v2).
 
 1. From within the Atlas Cloud console, load sample data using the `...` button from within your cluster settings. Look for the "Load Sample Dataset" option in the drop-down list.
    
