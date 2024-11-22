@@ -51,14 +51,18 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 Atlas atlas-2o6kes-shard-0 [primary] test>
 ```
 
+> If you would like to work with YOUR Mongo Atlas cluster instead, simply edit the connection string within the `~/.bashrc` file of your Codespace.
+
+## Watch
+
 After watching the [**Mongo in 30 minutes**](https://www.youtube.com/watch?v=pWbMrx5rVBE) video, try completing both of 
-these exercises:
+these exercises.
 
 ## Exercise 1
 
-This task uses sample data available on the Atlas Cloud console.
+This task uses sample data available in the Atlas Cloud console.
 
-1. From within the Atlas Cloud console, load sample data using the `...` button in your cluster settings. Look for the "Load Sample Dataset" option in the drop-down list.
+1. From within the Atlas Cloud console, load sample data using the `...` button from within your cluster settings. Look for the "Load Sample Dataset" option in the drop-down list.
    
 2. Using your `mongosh` shell, list your databases, select the `sample_mflix` set, then show collections within that:
 ```
