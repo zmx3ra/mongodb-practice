@@ -11,7 +11,11 @@ Learn MongoDB with hands-on practice.
   - [Learn More](#learn-more)
   - [Submit](#submit)
 
-## Run MongoDB & Connect
+## Fork This Repository
+
+To make and save changes to this project, [create a fork of this repository](https://github.com/nmagee/mongodb-practice/fork) and open it within a Codespace.
+
+## Install, Set Up MongoDB & Connect
 
 **Setup**
 
@@ -32,12 +36,12 @@ For this lab use the MongoDB Atlas cluster that you created:
 4. Provide credentials by setting three environment variables in your `~/.bashrc` file:
 
     ```
-    export MONGOHOST=""   # should look something like `cluster0.XXXX.mongodb.net` - remove `mongodb+srv://` and username/password if present.
+    export MONGOHOST=""   # should look something like `mongodb+srv://cluster0.XXXX.mongodb.net` - remove username/password if present.
     export MONGOPASS=""   # the db username you created with your Atlas cluster.
     export MONGOUSER=""   # the db password you set when you created your Atlas cluster.
     ```
 
-5. Source your `~/.bashrc` file to refresh your environment:
+5. Refresh `bash` by sourcing your `~/.bashrc` file:
 
     ```
     source ~/.bashrc
@@ -47,7 +51,7 @@ For this lab use the MongoDB Atlas cluster that you created:
 
 You can now connect to your DB with the `mongosh` command using your `env` parameters like this:
 ```
-mongosh "mongodb+srv://$MONGOUSER:$MONGOPASS@$MONGOHOST"
+mongosh $MONGOHOST --apiVersion 1 --username $MONGOUSER --password $MONGOPASS
 ```
 
 Run that command and you should get a prompt like this:
