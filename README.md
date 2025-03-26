@@ -1,8 +1,8 @@
-# Lab 6: Practice with MongoDB
+# Lab: Practice with MongoDB
 
 Learn MongoDB with hands-on practice.
 
-- [Lab 6: Practice with MongoDB](#lab-9-practice-with-mongodb)
+- [Lab: Practice with MongoDB](#lab-9-practice-with-mongodb)
   - [Run MongoDB \& Connect](#run-mongodb--connect)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
