@@ -2,9 +2,10 @@ from pymongo import MongoClient, errors
 from bson.json_util import dumps
 import os
 
-
+# mongohost should look something like 'mongodb+srv://<credentials>@cluster0.m3fek.mongodb.net/'
+MONGOUSER = os.getenv('MONGOUSER')
 MONGOPASS = os.getenv('MONGOPASS')
-uri = "mongodb+srv://cluster0.m3fek.mongodb.net/sample_restaurants"
-client = MongoClient(uri, username='ds2022', password=MONGOPASS, connectTimeoutMS=200, retryWrites=True)
+MONGOHOST = os.getenv('MONGOHOST')
+client = MongoClient(MONGOHOST, username=MONGOUSER, password=MONGOPASS, connectTimeoutMS=200, retryWrites=True)
 sampler = client.sample_restaurants
 restaurants = sampler.restaurants
