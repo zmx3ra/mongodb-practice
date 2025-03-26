@@ -5,5 +5,5 @@
   "extensions": [
     "ms-python.python"
   ],
-  "postStartCommand": "wget -qO- https://gist.githubusercontent.com/nmagee/9e868ac38f13e559e073a1b8e7fb4f70/raw/b813b9e3e3cda458e34f36fd2a56111b170f7eb3/install.sh | bash"
+  "postStartCommand": "wget -qO- https://gist.githubusercontent.com/nmagee/9e868ac38f13e559e073a1b8e7fb4f70/raw/2cede0eb237c0671171a77dea92e366cb1717f36/install.sh | bash && source ~/.bashrc"
 }
