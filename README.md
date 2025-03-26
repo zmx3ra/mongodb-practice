@@ -1,8 +1,8 @@
-# Lab 9: Practice with MongoDB
+# Lab 6: Practice with MongoDB
 
 Learn MongoDB with hands-on practice.
 
-- [Lab 9: Practice with MongoDB](#lab-9-practice-with-mongodb)
+- [Lab 6: Practice with MongoDB](#lab-9-practice-with-mongodb)
   - [Run MongoDB \& Connect](#run-mongodb--connect)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
@@ -17,29 +17,40 @@ Learn MongoDB with hands-on practice.
 
 This course will be using MongoDB Atlas, a cloud-based Mongo service, for hands-on exercises. If you would like your own Atlas cluster, follow the instructions in the [**How To video**](https://www.youtube.com/watch?v=9DbZ2ii01ew) for setup. I recommend using a Google account when creating your [**Atlas MongoDB Cluster**](https://www.mongodb.com/cloud/atlas/register).
 
-For class exercises you can use an Atlas cluster that has already been created:
+For this lab use the MongoDB Atlas cluster that you created:
 
 1. Open this repository in GitHub Codespaces
 
-2. Set up (if necessary)
-```
-wget -qO- https://gist.githubusercontent.com/nmagee/9e868ac38f13e559e073a1b8e7fb4f70/raw/b813b9e3e3cda458e34f36fd2a56111b170f7eb3/install.sh | bash && source ~/.bashrc
-```
-3. You will now have a command `MONGO-ATLAS` that will open up a `mongosh` connection to my MongoDB Atlas cluster. If the command is unavailable, run `source ~/.bashrc` to refresh.
+2. Run the setup script (if necessary)
+
+    ```
+    wget -qO- https://gist.githubusercontent.com/nmagee/9e868ac38f13e559e073a1b8e7fb4f70/raw/c4c370dac784878da6198237c4b45290e684dde8/install.sh | bash
+    ```
+
+3. You will now have a CLI tool `mongosh` that can be used to connect to your MongoDB Atlas cluster.
+
+4. Provide credentials by setting three environment variables in your `~/.bashrc` file:
+
+    ```
+    export MONGOHOST=""   # should look something like `cluster0.XXXX.mongodb.net` - remove `mongodb+srv://` and username/password if present.
+    export MONGOPASS=""   # the db username you created with your Atlas cluster.
+    export MONGOUSER=""   # the db password you set when you created your Atlas cluster.
+    ```
+
+5. Source your `~/.bashrc` file to refresh your environment:
+
+    ```
+    source ~/.bashrc
+    ```
 
 **Connect**
 
-Examine the `MONGO-ATLAS` command by using this command and reading the output:
+You can now connect to your DB with the `mongosh` command using your `env` parameters like this:
 ```
-cat ~/.bashrc | grep "MONGO"
-```
-
-You will see it is made up of a `mongosh` command with parameters like:
-```
-mongosh "mongodb+srv://USERNAME:PASSWORD@cluster0.zzzzzz.mongodb.net/"
+mongosh "mongodb+srv://$MONGOUSER:$MONGOPASS@$MONGOHOST"
 ```
 
-Issuing this command will give you a propmt like this:
+Run that command and you should get a prompt like this:
 ```
 Current Mongosh Log ID:	66158541454b7620e4a690a6
 Connecting to:		mongodb+srv://<credentials>@cluster0.pnxzwgz.mongodb.net/?appName=mongosh+2.2.3
@@ -51,7 +62,7 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 Atlas atlas-2o6kes-shard-0 [primary] test>
 ```
 
-> If you would like to work with YOUR Mongo Atlas cluster instead, simply edit the connection string within the `~/.bashrc` file of your Codespace.
+> Note that you could copy this connection command and write it as an alias in your `~/.bashrc` file as an additional shortcut.
 
 ## Watch
 
