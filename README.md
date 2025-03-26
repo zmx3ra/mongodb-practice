@@ -43,7 +43,7 @@ For this lab use the MongoDB Atlas cluster that you created:
     source ~/.bashrc
     ```
 
-**Connect**
+**Connect using the CLI**
 
 You can now connect to your DB with the `mongosh` command using your `env` parameters like this:
 ```
@@ -69,7 +69,7 @@ Atlas atlas-2o6kes-shard-0 [primary] test>
 After watching the [**Mongo in 30 minutes**](https://www.youtube.com/watch?v=pWbMrx5rVBE) video, try completing both of 
 these exercises.
 
-## Exercise 1
+## CLI Exercise 1
 
 This task uses sample data available in the [**Atlas Cloud console**](https://cloud.mongodb.com/v2).
 
@@ -119,7 +119,7 @@ db.movies.insertOne({
 });
 ```
 
-## Exercise 2
+## CLI Exercise 2
 
 This exercise walks you through creating your own database and populating a collection with your own data.
 

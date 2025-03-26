@@ -2,7 +2,7 @@ from pymongo import MongoClient, errors
 from bson.json_util import dumps
 import os
 
-# mongohost should look something like 'mongodb+srv://<credentials>@cluster0.m3fek.mongodb.net/'
+# mongohost should look something like 'mongodb+srv://cluster0.xxxxx.mongodb.net/'
 MONGOUSER = os.getenv('MONGOUSER')
 MONGOPASS = os.getenv('MONGOPASS')
 MONGOHOST = os.getenv('MONGOHOST')
