@@ -14,8 +14,8 @@ activities = sampler.activities
 
 
 new_record = {
-    "name": "swimming",
-      "equipment": ["swimsuit", "goggles"]
+    "name": "running",
+      "equipment": ["sneakers", "shorts"]
 }
 activities.insert_one(new_record)
 
@@ -47,6 +47,16 @@ new_record4 = {
 }
 activities.insert_one(new_record4)
 
-query=activities.find().limit(3)
-for i in query:
+
+
+activities.delete_many({"name": "swimming"}) #needed to do this because swimming kept popping up (https://www.mongodb.com/docs/manual/tutorial/remove-documents/?msockid=28e5b96d2c1a6e6d0c2ca8d62dcc6f88)
+
+
+queries=activities.find().limit(3)
+
+
+for i in queries:
 	print(i)
+
+
+
